@@ -15,7 +15,12 @@ permissions:
 
 jobs:
   install:
-    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # windows-11-arm makes Scoop pick each manifest's arm64 entry
+        runner: [ windows-latest, windows-11-arm ]
+    runs-on: ${{ matrix.runner }}
     defaults:
       run:
         shell: pwsh
