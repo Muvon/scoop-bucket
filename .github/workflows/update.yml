@@ -1,0 +1,48 @@
+name: Update
+
+# A tool's release workflow dispatches `release` with its repository, which
+# creates or refreshes that manifest. The schedule refreshes every manifest in
+# case a dispatch was missed.
+on:
+  repository_dispatch:
+    types: [release]
+  schedule:
+    - cron: '20 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'OWNER/REPO to add or refresh (empty = every manifest)'
+        type: string
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write manifests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.event.client_payload.repository || inputs.repository }}
+        run: python3 bin/update.py $REPOSITORY
+
+      - name: Commit
+        run: |
+          git add bucket
+          if git diff --cached --quiet; then
+            echo "No manifest changes"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "chore(bucket): update $(git diff --cached --name-only | xargs -n1 basename | sed 's/\.json$//' | paste -sd, -)"
+          git push

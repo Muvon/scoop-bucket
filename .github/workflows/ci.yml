@@ -1,0 +1,40 @@
+name: CI
+
+# Installs every manifest with Scoop on a real Windows host and runs the
+# installed binary, so a bad URL, hash, or bin entry fails here.
+on:
+  push:
+    branches: [ master ]
+    paths: [ 'bucket/**', '.github/workflows/ci.yml' ]
+  pull_request:
+    paths: [ 'bucket/**', '.github/workflows/ci.yml' ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Scoop
+        run: |
+          Invoke-RestMethod https://get.scoop.sh -OutFile install-scoop.ps1
+          # Hosted runners run as administrator, which Scoop refuses without -RunAsAdmin
+          ./install-scoop.ps1 -RunAsAdmin
+          Add-Content -Path $env:GITHUB_PATH -Value "$env:USERPROFILE\scoop\shims"
+
+      - name: Install each manifest
+        run: |
+          foreach ($manifest in Get-ChildItem bucket/*.json) {
+            # An absolute path is read as a local manifest, not <bucket>/<app>
+            scoop install $manifest.FullName
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+            & $manifest.BaseName --version
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
