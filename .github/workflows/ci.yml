@@ -35,6 +35,7 @@ jobs:
             # An absolute path is read as a local manifest, not <bucket>/<app>
             scoop install $manifest.FullName
             if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-            & $manifest.BaseName --version
+            # --help, not --version: not every tool defines a version flag
+            & $manifest.BaseName --help | Out-Null
             if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           }
