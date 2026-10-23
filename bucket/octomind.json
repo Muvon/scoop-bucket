@@ -1,16 +1,16 @@
 {
-  "version": "0.60.0",
+  "version": "0.60.1",
   "description": "Open-source AI coding agent and agent runtime: one binary, any model, MCP-native. Runs in terminal, CI, or as a daemon.",
   "homepage": "https://octomind.run",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Muvon/octomind/releases/download/0.60.0/octomind-0.60.0-x86_64-pc-windows-msvc.zip",
-      "hash": "9cda3474eeb3e4386aabd767d51e2a7ec4d1f2590d0fa11441520bbe299ccc7d"
+      "url": "https://github.com/Muvon/octomind/releases/download/0.60.1/octomind-0.60.1-x86_64-pc-windows-msvc.zip",
+      "hash": "0a9118d11d54c59e98d4ae864f071a30efbf123fdc1ca28fc882a4effd49c85e"
     },
     "arm64": {
-      "url": "https://github.com/Muvon/octomind/releases/download/0.60.0/octomind-0.60.0-aarch64-pc-windows-msvc.zip",
-      "hash": "d28f031374cae87dc074c73447f5f3162b2a02a1edd41802b33ea24d1df45938"
+      "url": "https://github.com/Muvon/octomind/releases/download/0.60.1/octomind-0.60.1-aarch64-pc-windows-msvc.zip",
+      "hash": "69b88e1e52e5cb0c8a4cdbf1208d5c85bc3d6963c3f552095fa416ae6516a872"
     }
   },
   "bin": "octomind.exe",
