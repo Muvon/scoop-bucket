@@ -6,11 +6,11 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/Muvon/octohub/releases/download/0.14.1/octohub-0.14.1-x86_64-pc-windows-msvc.zip",
-      "hash": "832b305595001864f9304426a52f24caf7478f7cc45a279684cf96930a9e7bab"
+      "hash": "cdb98a9b11634d71d89f6821117eb93b60ec970237e1a6d1a16398183242de8c"
     },
     "arm64": {
       "url": "https://github.com/Muvon/octohub/releases/download/0.14.1/octohub-0.14.1-aarch64-pc-windows-msvc.zip",
-      "hash": "b3e220fc1f20f8d0ea245ba44be57c66690a33d91dbcc63252c275649f8f873d"
+      "hash": "86ab6977791648782194bb4f3c4753cf4a9f6030c913e4f604a0225662b5d496"
     }
   },
   "bin": "octohub.exe",
