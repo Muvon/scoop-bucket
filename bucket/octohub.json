@@ -1,16 +1,16 @@
 {
-  "version": "0.15.1",
+  "version": "0.16.0",
   "description": "High-performance LLM proxy: one OpenAI-style API over 20+ providers, with multi-tenant keys, full request logging, and usage analytics. Built in Rust.",
   "homepage": "https://octomind.run/product/octohub/",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Muvon/octohub/releases/download/0.15.1/octohub-0.15.1-x86_64-pc-windows-msvc.zip",
-      "hash": "ecf6d8bfb75edf8513ee2bcb380cbc380cc7c9dcecc72b14d337432a6fcb767c"
+      "url": "https://github.com/Muvon/octohub/releases/download/0.16.0/octohub-0.16.0-x86_64-pc-windows-msvc.zip",
+      "hash": "36c30a3cb15f8c2158727c9747083f88530fda209492c003f9ffe8cd7af4beb2"
     },
     "arm64": {
-      "url": "https://github.com/Muvon/octohub/releases/download/0.15.1/octohub-0.15.1-aarch64-pc-windows-msvc.zip",
-      "hash": "b2eeb1d3dc518f121a048b4f4c738011ef4a82f2934896d435657844762ca2ea"
+      "url": "https://github.com/Muvon/octohub/releases/download/0.16.0/octohub-0.16.0-aarch64-pc-windows-msvc.zip",
+      "hash": "55eeb055e0dbbb4f5b7e75fb4727d995c99a6514507598120726561733ea18d1"
     }
   },
   "bin": "octohub.exe",
