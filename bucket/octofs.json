@@ -1,16 +1,16 @@
 {
-  "version": "0.24.0",
+  "version": "0.25.0",
   "description": "Rust MCP filesystem server for AI coding agents: view, edit, batch-edit, shell, search, hash-verified line ids, SSH/SFTP",
   "homepage": "https://octomind.run/product/octofs/",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Muvon/octofs/releases/download/0.24.0/octofs-0.24.0-x86_64-pc-windows-msvc.zip",
-      "hash": "453efd623c10ac76b52692cda82bd67efa9753252208c59965d62600b282f449"
+      "url": "https://github.com/Muvon/octofs/releases/download/0.25.0/octofs-0.25.0-x86_64-pc-windows-msvc.zip",
+      "hash": "fcadc330829f50d671934b0075c21305ec4b8552d8dc40306561aecb83153cdd"
     },
     "arm64": {
-      "url": "https://github.com/Muvon/octofs/releases/download/0.24.0/octofs-0.24.0-aarch64-pc-windows-msvc.zip",
-      "hash": "f5be676665b4e0f2b0b03ae76f542b3cb30b5c2d3df1c49485d1294e68ab7a0b"
+      "url": "https://github.com/Muvon/octofs/releases/download/0.25.0/octofs-0.25.0-aarch64-pc-windows-msvc.zip",
+      "hash": "16c82a5234ad5fd30e5d0d5dee6b4e87e458eee6814f3b32aca9d724631d57cf"
     }
   },
   "bin": "octofs.exe",
