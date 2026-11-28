@@ -1,16 +1,16 @@
 {
-  "version": "0.30.0",
+  "version": "0.30.2",
   "description": "Structural code intelligence for AI agents — semantic search, knowledge graphs, and a built-in MCP server in one Rust binary. Give Claude, Cursor, and any MCP client a deep understanding of your codebase.",
   "homepage": "https://octomind.run/product/octocode",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Muvon/octocode/releases/download/0.30.0/octocode-0.30.0-x86_64-pc-windows-msvc.zip",
-      "hash": "88f53ac417830d99021adc898da4096cf4665baa238509e23d501f8478f9f474"
+      "url": "https://github.com/Muvon/octocode/releases/download/0.30.2/octocode-0.30.2-x86_64-pc-windows-msvc.zip",
+      "hash": "9eb3de3f387672f9097c49ac37c3edd8dc9f57f93d1cd851688c38efa1b34541"
     },
     "arm64": {
-      "url": "https://github.com/Muvon/octocode/releases/download/0.30.0/octocode-0.30.0-aarch64-pc-windows-msvc.zip",
-      "hash": "52c043e6066df0bc19121cbeb48d812a0f5ee061a9b6e7c87d57a69b5a490f28"
+      "url": "https://github.com/Muvon/octocode/releases/download/0.30.2/octocode-0.30.2-aarch64-pc-windows-msvc.zip",
+      "hash": "7419b480504f3ec86c64eeb4cb065d6f2e3a4a1d2a0ddc150d7e6257fc1e4ce6"
     }
   },
   "bin": "octocode.exe",
